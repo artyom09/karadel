@@ -62,4 +62,9 @@ return array (
   'view-images' => 'Դիտել լուսանկարները',
   'reservation' => 'Ամրագրում',
   'photo-shoot' => 'Պատվիրել ֆոտոսեսիա',
+  'choose-photo-zone' => 'Ընտրեք Ֆոտոզոնան',
+  'choose-accessories' => 'Ընտրեք Պարագաները',
+  'choose-clothes' => 'Ընտրեք Հագուստը',
+  'օther-notes' => 'Այլ նշումներ',
+  'make-request' => 'Կատարել հարցում',
 );

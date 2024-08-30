@@ -18,7 +18,7 @@
                         {{$about_us->getTranslatedAttribute('part_two',config('app.locale'),config('voyager.multilingual.default'))}}
                     </p>
                     <p class="h2__text animate-in-up">
-                        {{$about_us->getTranslatedAttribute('part_three',config('app.locale'),config('voyager.multilingual.default'))}}
+                        {{$about_us->getTranslatedAttribute('part_title',config('app.locale'),config('voyager.multilingual.default'))}}
                     </p>
                 </div>
 
@@ -40,7 +40,7 @@
                                         C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                                         C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                                     </svg>
-                                    <span>Ընտրեք Ֆոտոզոնան</span>
+                                    <span>@lang('main.choose-photo-zone')</span>
                                     <span id="dropdown-icon-photos" class="dropdown-icon">&#9650;</span>
                                 </p>
                                 <div class="container-fluid px-0 inner__gallery" id="dropdown-content-photos">
@@ -64,7 +64,7 @@
                                         C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                                         C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                                     </svg>
-                                    <span>Ընտրեք Պարագաները</span>
+                                    <span>@lang('main.choose-accessories')</span>
                                     <span id="dropdown-icon-accessories" class="dropdown-icon">&#9650;</span>
                                 </p>
                                 <div class="container-fluid px-0 inner__gallery" id="dropdown-content-accessories">
@@ -88,7 +88,7 @@
                                         C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                                         C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                                     </svg>
-                                    <span>Ընտրեք Հագուստը</span>
+                                    <span>@lang('main.choose-clothes')</span>
                                     <span id="dropdown-icon-clothes" class="dropdown-icon">&#9650;</span>
                                 </p>
                                 <div class="container-fluid px-0 inner__gallery" id="dropdown-content-clothes">
@@ -108,23 +108,23 @@
                             <div class="container-fluid p-0 mt-40">
                                 <div class="row gx-0">
                                     <div class="col-12 col-md-6 form__item animate-in-up">
-                                        <input type="text" name="name" placeholder="Անուն*" required>
+                                        <input type="text" name="name" placeholder="@lang('main.name')*" required>
                                     </div>
                                     <div class="col-12 col-md-6 form__item animate-in-up">
-                                        <input type="tel" name="phone" placeholder="Հեռախոս*" required>
+                                        <input type="tel" name="phone" placeholder="@lang('main.phone')*" required>
                                     </div>
                                     <div class="col-12 col-md-6 form__item animate-in-up">
-                                        <input type="text" name="address" placeholder="Վայր" required>
+                                        <input type="text" name="address" placeholder="@lang('main.address')" required>
                                     </div>
                                     <div class="col-12 col-md-6 form__item animate-in-up">
                                         <input type="datetime-local" name="date" placeholder="Օր / Ժամ" required>
                                     </div>
                                     <div class="col-12 form__item animate-in-up">
-                                        <textarea name="message" placeholder="Նշումներ" required></textarea>
+                                        <textarea name="message" placeholder="@lang('main.օther-notes')" required></textarea>
                                     </div>
                                     <div class="col-12 form__item animate-in-up">
                                         <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
-                                            <span class="btn-caption">Կատարել հարցում</span>
+                                            <span class="btn-caption">@lang('main.make-request')</span>
                                             <i class="ph-bold ph-paper-plane-tilt"></i>
                                         </button>
                                     </div>

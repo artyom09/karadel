@@ -62,4 +62,9 @@ return array (
   'view-images' => 'Посмотреть фотографии',
   'reservation' => 'Бронирование',
   'photo-shoot' => 'Забронировать фотосессию',
+  'choose-photo-zone' => 'Выберите Фотосону',
+  'choose-accessories' => 'Выберите Аксессуары',
+  'choose-clothes' => 'Выберите Одежду',
+  'օther-notes' => 'Другие Примечания',
+  'make-request' => 'Сделать запрос',
 );

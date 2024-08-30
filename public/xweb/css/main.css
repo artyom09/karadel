@@ -3132,7 +3132,7 @@ form textarea:required:valid {
 @media only screen and (min-width: 1600px) {
   .teaser {
     padding-top: 5.2rem;
-    padding-bottom: 5.7rem;
+    padding-bottom: 3.7rem;
   }
 }
 
@@ -4347,4 +4347,17 @@ form textarea:required:valid {
 /* Поворот иконки при открытии */
 .dropdown-content.open ~ .dropdown-icon {
     transform: rotate(180deg); /* Поворот стрелки вверх */
+}
+
+.mb-30 {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mb-30 {
+        margin-bottom: 60px !important;
+    }
+    .content__block.block-large {
+        margin-bottom: 4rem !important;
+    }
 }
