@@ -4354,8 +4354,9 @@ form textarea:required:valid {
 }
 
 @media only screen and (max-width: 768px) {
-  .mb-30 {
+    .mb-30 {
         margin-bottom: 60px !important;
+        bottom: 60px !important;
     }
     .content__block.block-large {
         margin-bottom: 4rem !important;
