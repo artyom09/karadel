@@ -19,15 +19,15 @@ $(function () {
     function done_func() {
         let lang = $("html").attr("lang");
         if (lang == "hy") {
-            (message = "Հաղորդագրութունը հաջողությամբ ուղարկվել է"),
+            (message = "Ձեր հարցումը հաջողությամբ ուղարկվել է"),
                 (info = "Շնորհակալություն"),
                 (button = "Փակել");
         } else if (lang == "ru") {
-            (message = "Сообщение отправлено"),
+            (message = "Ваш запрос был успешно отправлен"),
                 (info = "Спасибо"),
                 (button = "Закрыть");
         } else if (lang == "en") {
-            (message = "Message successfully send"),
+            (message = "Your request has been successfully sent"),
                 (info = "Thanks"),
                 (button = "Close");
         }
