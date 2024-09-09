@@ -9,12 +9,12 @@ function activeMenu($uri = '')
 }
 @endphp
 
-    <div id="loader" class="loader">
+    {{-- <div id="loader" class="loader">
         <div id="loaderContent" class="loader__content">
             <div class="loader__shadow"></div>
             <div class="loader__box"></div>
         </div>
-    </div>
+    </div> --}}
 
     <header id="header" class="header d-flex justify-content-between">
         <div class="header__navigation">
