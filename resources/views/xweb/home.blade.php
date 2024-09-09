@@ -210,7 +210,11 @@
                                     <div class="testimonials-card animate-in-up">
                                         <div class="testimonials-card__tauthor d-flex animate-in-up">
                                             <div class="tauthor__avatar">
-                                                <img src="{{ Voyager::image($review->image) }}" alt="Review Author">
+                                                @if($review->image != null)
+                                                <img src="{{ Voyager::image($review->image) }}" alt="Review">
+                                                @else
+                                                <img src="/xweb/img/user.png" alt="Review">
+                                                @endif
                                             </div>
                                             <div class="tauthor__info d-flex flex-column justify-content-center">
                                                 <p class="tauthor__name">{{$review->getTranslatedAttribute('name',config('app.locale'),config('voyager.multilingual.default'))}}</p>
