@@ -142,16 +142,16 @@ function activeMenu($uri = '')
                 <div class="avatar__socials">
                     <ul class="socials-square d-flex justify-content-between">
                         <li class="socials-square__item">
-                            <a class="socials-square__link btn" href="https://www.instagram.com/" target="_blank"><i class="ph-bold ph-instagram-logo"></i></a>
+                            <a class="socials-square__link btn" href="{{$header_contacts->instagram_link}}" target="_blank"><i class="ph-bold ph-instagram-logo"></i></a>
                         </li>
                         <li class="socials-square__item">
-                            <a class="socials-square__link btn" href="https://www.facebook.com/" target="_blank"><i class="ph-bold ph-facebook-logo"></i></a>
+                            <a class="socials-square__link btn" href="{{$header_contacts->fb_link}}" target="_blank"><i class="ph-bold ph-facebook-logo"></i></a>
                         </li>
                         <li class="socials-square__item">
-                            <a class="socials-square__link btn" href="https://www.pinterest.com/" target="_blank"><i class="ph-bold ph-pinterest-logo"></i></a>
+                            <a class="socials-square__link btn" href="{{$header_contacts->tiktok_link}}" target="_blank"><i class="ph-bold ph-tiktok-logo"></i></a>
                         </li>
                         <li class="socials-square__item">
-                            <a class="socials-square__link btn" href="https://www.behance.net/" target="_blank"><i class="ph-bold ph-youtube-logo"></i></a>
+                            <a class="socials-square__link btn" href="#" target="_blank"><i class="ph-bold ph-youtube-logo"></i></a>
                         </li>
                     </ul>
                 </div>
