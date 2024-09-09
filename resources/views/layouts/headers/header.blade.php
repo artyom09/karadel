@@ -82,6 +82,7 @@ function activeMenu($uri = '')
 
             <div class="avatar__block">
                 <div class="avatar__logo d-flex align-items-center">
+                    <a @if(Route::currentRouteName() == null) href="#home" @else href="/{{config('app.locale')}}" @endif>
                     <div class="logo__image">
                         <!-- Your Logo Here!!! -->
                         <!--<img src="{{ asset('xweb') }}/img/logo.svg" alt="Braxton - Personal Portfolio & Resume HTML Template Logo">-->
@@ -107,9 +108,9 @@ function activeMenu($uri = '')
                     h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z" />
                             </g>
                         </svg>
-                    </div>
+                    </div> </a>
                     <div class="logo__caption">
-                        <p>KarAdel</p>
+                        <a @if(Route::currentRouteName() == null) href="#home" @else href="/{{config('app.locale')}}" @endif><p>KarAdel</p></a>
                     </div>
                 </div>
                 <div class="avatar__image">
