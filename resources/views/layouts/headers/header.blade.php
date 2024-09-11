@@ -85,7 +85,7 @@ function activeMenu($uri = '')
                     <a @if(Route::currentRouteName() == null) href="#home" @else href="/{{config('app.locale')}}" @endif>
                     <div class="logo__image">
                         <!-- Your Logo Here!!! -->
-                        <!--<img src="{{ asset('xweb') }}/img/logo.svg" alt="Braxton - Personal Portfolio & Resume HTML Template Logo">-->
+                        <!--<img src="{{ asset('xweb') }}/img/logo.svg" alt="">-->
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="85px" height="85px" viewBox="0 0 85 85" style="enable-background:new 0 0 85 85;" xml:space="preserve" class="gradient-fill">
                             <style type="text/css">
                                 .gradient-fill {
@@ -114,7 +114,7 @@ function activeMenu($uri = '')
                     </div>
                 </div>
                 <div class="avatar__image">
-                    <img src="{{ asset('xweb') }}/img/avatars/1024x1024_a02.webp" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
+                    <img src="{{ asset('xweb') }}/img/avatars/1024x1024_a02.webp" alt="Karadel">
                 </div>
             </div>
 
@@ -157,7 +157,7 @@ function activeMenu($uri = '')
                     </ul>
                 </div>
                 <div class="avatar__btnholder">
-                    <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent fs-16" href="{{ route('reservation') }}">
+                    <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent fs-16" href="{{ route('reservation') }}#reserv">
                         <span class="btn-caption">@lang('main.photo-shoot')</span>
                     </a>
                 </div>
