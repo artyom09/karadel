@@ -175,7 +175,7 @@
                                         <p class="small cards__text animate-in-up">{{$slider->getTranslatedAttribute('part_info_two',config('app.locale'),config('voyager.multilingual.default'))}}</p>
                                     </div>
                                     <div class="cards__image d-flex animate-in-up">
-                                        <img src="{{ Voyager::image($slider->part_image_one) }}" alt="@lang('main.photo-studio')">
+                                        <img src="{{ Voyager::image($slider->part_image_two) }}" alt="@lang('main.photo-studio')">
                                     </div>
                                 </div>
                             </div>
