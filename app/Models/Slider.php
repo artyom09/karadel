@@ -12,6 +12,16 @@ class Slider extends Model
     use Translatable;
     protected $translatable =
     [
-        'title', 'min_title', 'button_name', 'info', 'button_link'
+        'title',
+        'min_title',
+        'button_name',
+        'info',
+        'button_link',
+        'part_title_one',
+        'part_title_two',
+        'part_min_info_one',
+        'part_min_info_two',
+        'part_info_one',
+        'part_info_two'
     ];
 }

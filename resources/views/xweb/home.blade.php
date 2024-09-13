@@ -154,32 +154,28 @@
                             <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
                                 <div class="cards__card d-flex flex-column">
                                     <div class="cards__descr">
-                                        <h4 class="cards__title animate-in-up">Frontend<br>development</h4>
+                                        <h4 class="cards__title animate-in-up">{{$slider->getTranslatedAttribute('part_title_one',config('app.locale'),config('voyager.multilingual.default'))}}</h4>
                                         <div class="cards__tags d-flex flex-wrap animate-in-up">
-                                            <span class="rounded-tag tag-outline">UI/UX Design</span>
-                                            <span class="rounded-tag tag-outline">Design to Code</span>
+                                            <span class="rounded-tag tag-outline">{{$slider->getTranslatedAttribute('part_min_info_one',config('app.locale'),config('voyager.multilingual.default'))}}</span>
                                         </div>
-                                        <p class="small cards__text animate-in-up">I work with HTML/CSS, Framer and WordPress.</p>
+                                        <p class="small cards__text animate-in-up">{{$slider->getTranslatedAttribute('part_info_one',config('app.locale'),config('voyager.multilingual.default'))}}</p>
                                     </div>
                                     <div class="cards__image d-flex animate-in-up">
-                                        <img src="{{ asset('xweb') }}/img/services/1200x900_s01.webp" alt="Service/Feature Image">
+                                        <img src="{{ Voyager::image($slider->part_image_one) }}" alt="@lang('main.photo-studio')">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
                                 <div class="cards__card d-flex flex-column">
                                     <div class="cards__descr">
-                                        <h4 class="cards__title animate-in-up">Digital art and graphic design</h4>
+                                        <h4 class="cards__title animate-in-up">{{$slider->getTranslatedAttribute('part_title_two',config('app.locale'),config('voyager.multilingual.default'))}}</h4>
                                         <div class="cards__tags d-flex flex-wrap animate-in-up">
-                                            <span class="rounded-tag tag-outline">Illustrations</span>
-                                            <span class="rounded-tag tag-outline">AI Experiments</span>
+                                            <span class="rounded-tag tag-outline">{{$slider->getTranslatedAttribute('part_min_info_two',config('app.locale'),config('voyager.multilingual.default'))}}</span>
                                         </div>
-                                        <p class="small cards__text animate-in-up">I use Adobe Photoshop, Fresco and Blender to create
-                                            illustrations and 3D renders for my clients and stocks.
-                                        </p>
+                                        <p class="small cards__text animate-in-up">{{$slider->getTranslatedAttribute('part_info_two',config('app.locale'),config('voyager.multilingual.default'))}}</p>
                                     </div>
                                     <div class="cards__image d-flex animate-in-up">
-                                        <img src="{{ asset('xweb') }}/img/services/1200x900_s02.webp" alt="Service/Feature Image">
+                                        <img src="{{ Voyager::image($slider->part_image_one) }}" alt="@lang('main.photo-studio')">
                                     </div>
                                 </div>
                             </div>
