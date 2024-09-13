@@ -62,7 +62,7 @@
                             </p>
                         </div>
                         <div class="col-12 col-md-6 contact-lines__data">
-                            <p class="contact-lines__title animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Կայքի նախագծումը և պատրաստումը՝ <a class="text-link-bold" href="https://xholding.am" target="_blank" style=" color: #5d4ec4">Xholding.am</a></p>
+                            <p class="contact-lines__title animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">@lang('main.created') <a class="text-link-bold" href="https://xholding.am" target="_blank" style=" color: #5d4ec4">Xholding.am</a></p>
                             <p class="contact-lines__text animate-in-up " style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
                                 <a class="text-link-bold" href="https://xholding.am" target="_blank">.</a>
                             </p>
