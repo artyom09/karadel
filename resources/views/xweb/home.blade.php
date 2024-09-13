@@ -154,28 +154,36 @@
                             <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
                                 <div class="cards__card d-flex flex-column">
                                     <div class="cards__descr">
+                                        <a href="{{ route('reservation') }}#reserv">
                                         <h4 class="cards__title animate-in-up">{{$slider->getTranslatedAttribute('part_title_one',config('app.locale'),config('voyager.multilingual.default'))}}</h4>
                                         <div class="cards__tags d-flex flex-wrap animate-in-up">
                                             <span class="rounded-tag tag-outline">{{$slider->getTranslatedAttribute('part_min_info_one',config('app.locale'),config('voyager.multilingual.default'))}}</span>
                                         </div>
                                         <p class="small cards__text animate-in-up">{{$slider->getTranslatedAttribute('part_info_one',config('app.locale'),config('voyager.multilingual.default'))}}</p>
+                                        </a>
                                     </div>
                                     <div class="cards__image d-flex animate-in-up">
-                                        <img src="{{ Voyager::image($slider->part_image_one) }}" alt="@lang('main.photo-studio')">
+                                        <a href="{{ route('reservation') }}#reserv">
+                                            <img src="{{ Voyager::image($slider->part_image_one) }}" alt="@lang('main.photo-studio')">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
                                 <div class="cards__card d-flex flex-column">
                                     <div class="cards__descr">
+                                        <a href="{{ route('reservation') }}#reserv">
                                         <h4 class="cards__title animate-in-up">{{$slider->getTranslatedAttribute('part_title_two',config('app.locale'),config('voyager.multilingual.default'))}}</h4>
                                         <div class="cards__tags d-flex flex-wrap animate-in-up">
                                             <span class="rounded-tag tag-outline">{{$slider->getTranslatedAttribute('part_min_info_two',config('app.locale'),config('voyager.multilingual.default'))}}</span>
                                         </div>
                                         <p class="small cards__text animate-in-up">{{$slider->getTranslatedAttribute('part_info_two',config('app.locale'),config('voyager.multilingual.default'))}}</p>
+                                        </a>
                                     </div>
                                     <div class="cards__image d-flex animate-in-up">
-                                        <img src="{{ Voyager::image($slider->part_image_two) }}" alt="@lang('main.photo-studio')">
+                                        <a href="{{ route('reservation') }}#reserv">
+                                            <img src="{{ Voyager::image($slider->part_image_two) }}" alt="@lang('main.photo-studio')">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
