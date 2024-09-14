@@ -336,7 +336,7 @@
             <tr>
                 <td valign="middle" class="hero bg_white" style="padding: 2em 0 4em 0;">
                     <table>
-                        <tr>
+                        <tr> @dd($message)
                             <td>
                                 <div class="text" style="padding: 0 2.5em; text-align: center;">
                                     <h2>Դուք Ունեք նոր ամրագրում</h2>
