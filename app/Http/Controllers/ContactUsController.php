@@ -7,6 +7,7 @@ use App\Models\Message;
 use App\Models\Photozona;
 use App\Models\Accessory;
 use App\Models\Clothes;
+use Mail;
 use App\Mail\Reservation;
 use Illuminate\Http\Request;
 
