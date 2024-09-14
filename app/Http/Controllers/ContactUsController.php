@@ -7,6 +7,7 @@ use App\Models\Message;
 use App\Models\Photozona;
 use App\Models\Accessory;
 use App\Models\Clothes;
+use App\Mail\Reservation;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -61,6 +62,7 @@ class ContactUsController extends Controller
         $message->message = $request->message;
 
         if($message->save()) {
+            Mail::send(new Reservation($message));
             return redirect()->back()->with('status', 'հաջողությամբ ուղարկվել է');
         }
     }
