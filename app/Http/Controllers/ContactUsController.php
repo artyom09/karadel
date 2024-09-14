@@ -52,18 +52,18 @@ class ContactUsController extends Controller
             $clothes = $selectedPhotos['clothe'];
         }
 
-        $message = new Message();
-        $message->photozona = json_encode($photozonas);
-        $message->accessories = json_encode($accessories);
-        $message->clothes =  json_encode($clothes);
-        $message->name = $request->name;
-        $message->phone = $request->phone;
-        $message->address = $request->address;
-        $message->date = $request->date;
-        $message->message = $request->message;
+        $reservation = new Message();
+        $reservation->photozona = json_encode($photozonas);
+        $reservation->accessories = json_encode($accessories);
+        $reservation->clothes =  json_encode($clothes);
+        $reservation->name = $request->name;
+        $reservation->phone = $request->phone;
+        $reservation->address = $request->address;
+        $reservation->date = $request->date;
+        $reservation->message = $request->message;
 
-        if($message->save()) {
-            Mail::send(new Reservation($message));
+        if($reservation->save()) {
+            Mail::send(new Reservation($reservation));
             return redirect()->back()->with('status', 'հաջողությամբ ուղարկվել է');
         }
     }

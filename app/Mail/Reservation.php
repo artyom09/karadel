@@ -10,15 +10,15 @@ use Illuminate\Queue\SerializesModels;
 class Reservation extends Mailable
 {
     use Queueable, SerializesModels;
-    public $message;
+    public $reservation;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($reservation)
     {
-        $this->message = $message;
+        $this->reservation = $reservation;
     }
 
     /**

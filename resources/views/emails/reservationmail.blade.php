@@ -336,15 +336,15 @@
             <tr>
                 <td valign="middle" class="hero bg_white" style="padding: 2em 0 4em 0;">
                     <table>
-                        <tr> @dd($message)
+                        <tr>
                             <td>
                                 <div class="text" style="padding: 0 2.5em; text-align: center;">
                                     <h2>Դուք Ունեք նոր ամրագրում</h2>
-                                    <h3>{{$message->name}}</h3>
-                                    <h3>{{$message->phone}}</h3>
-                                    <h3>{{$message->address}}</h3>
-                                    <h3>{{$message->date}}</h3>
-                                    <p>{{$message->message}}</p>
+                                    <h3>{{$reservation->name}}</h3>
+                                    <h3>{{$reservation->phone}}</h3>
+                                    <h3>{{$reservation->address}}</h3>
+                                    <h3>{{$reservation->date}}</h3>
+                                    <p>{{$reservation->message}}</p>
                                     <p style="text-align: center"><a href="https://karadel.xholding.am/" class="btn btn-primary">Բացել կայքը</a></p>
                                 </div>
                             </td>
