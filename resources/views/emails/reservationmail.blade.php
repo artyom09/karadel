@@ -330,10 +330,7 @@
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
         &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
-    <?php
-    use App\Models\Message;
-        $messages =  Message::where('id', $message->id)->first;
-    ?>
+
     <div style="max-width: 600px; margin: 0 auto;" class="email-container">
         <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
             <tr>
@@ -343,11 +340,11 @@
                             <td>
                                 <div class="text" style="padding: 0 2.5em; text-align: center;">
                                     <h2>Դուք Ունեք նոր ամրագրում</h2>
-                                    <h3>{{$messages->name}}</h3>
-                                    <h3>{{$messages->phone}}</h3>
-                                    <h3>{{$messages->address}}</h3>
-                                    <h3>{{$messages->date}}</h3>
-                                    <p>{{$messages->message}}</p>
+                                    <h3>{{$message->name}}</h3>
+                                    <h3>{{$message->phone}}</h3>
+                                    <h3>{{$message->address}}</h3>
+                                    <h3>{{$message->date}}</h3>
+                                    <p>{{$message->message}}</p>
                                     <p style="text-align: center"><a href="https://karadel.xholding.am/" class="btn btn-primary">Բացել կայքը</a></p>
                                 </div>
                             </td>
