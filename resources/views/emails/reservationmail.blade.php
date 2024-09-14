@@ -340,11 +340,11 @@
                             <td>
                                 <div class="text" style="padding: 0 2.5em; text-align: center;">
                                     <h2>Դուք Ունեք նոր ամրագրում</h2>
-                                    <h3>{{$reservation->name}}</h3>
-                                    <h3>{{$reservation->phone}}</h3>
-                                    <h3>{{$reservation->address}}</h3>
-                                    <h3>{{$reservation->date}}</h3>
-                                    <p>{{$reservation->message}}</p>
+                                    <p>Անուն՝ - {{$reservation->name}}</պ>
+                                    <p>Հեռախոս՝ - {{$reservation->phone}}</p>
+                                    <p>Հասցե՝ - {{$reservation->address}}</p>
+                                    <p>Օր՝ - {{$reservation->date}}</p>
+                                    <p>Հաղորդագրություն՝ -  {{$reservation->message}}</p>
                                     <p style="text-align: center"><a href="https://karadel.xholding.am/" class="btn btn-primary">Բացել կայքը</a></p>
                                 </div>
                             </td>
