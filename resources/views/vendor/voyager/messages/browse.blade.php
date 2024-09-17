@@ -38,32 +38,6 @@
 
 @section('content')
     <style>
-        .modal {
-            display: none; /* Скрыть модальное окно по умолчанию */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
-        .modal-content h2 {
-            margin-top: 0;
-        }
 
         input[type="number"] {
             width: calc(100% - 20px);
@@ -373,14 +347,19 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-   <div id="archiveModal" class="modal modal-danger">
+   <div id="archiveModal" class="modal modal-danger  fade" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
-            <h2>Նշեք գումարը</h2>
-            <input type="number" id="archiveCode" name="archiveCode" placeholder="Գրեք գումարի չափը">
-            <div class="modal-buttons">
-                <button id="submitArchive">Հաստատել</button>
-                <button id="cancelArchive">Չեղարկել</button>
+            <div class="modal-header">
+                <button type="button" class="close" id="cancelArchivee" data-dismiss="modal" aria-label="{{ __('voyager::generic.close') }}"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><i class="voyager-dollar"></i> Նշեք գումարը</h4>
+            </div>
+            <div class="modal-footer">
+                <input type="number" id="archiveCode" name="archiveCode" placeholder="Գրեք գումարի չափը">
+                <div class="modal-buttons">
+                    <button id="submitArchive">Հաստատել</button>
+                    <button id="cancelArchive">Չեղարկել</button>
+                </div>
             </div>
         </div>
         </div>
@@ -413,6 +392,9 @@
                 e.preventDefault();
                 messageIdToSend = $(this).data("id");
                 $('#archiveModal').show();
+                 $('#archiveModal').addClass('in');
+                var backdrop = $('<div class="modal-backdrop fade in"></div>');
+                $('body').append(backdrop);
             });
 
             // Отправляем данные через AJAX, если пользователь нажал "Подтвердить"
@@ -440,7 +422,12 @@
             // Закрываем модальное окно
             $('#cancelArchive').click(function() {
                 $('#archiveModal').hide();
+                $('.modal-backdrop').remove();
             });
+            $('#cancelArchivee').click(function() {
+                $('#archiveModal').hide();
+                $('.modal-backdrop').remove();
+            })
         });
 
         $(document).ready(function () {
