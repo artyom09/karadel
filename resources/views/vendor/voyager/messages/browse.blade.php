@@ -319,7 +319,7 @@
                                                 @endif
                                             @endforeach
                                             <button  class="btn btn-sm btn-success pull-right edit add-archive" data-id="{{$data->id}}" style="margin-right: 5px;">
-                                                <i class="voyager-edit"></i> <span class="hidden-xs hidden-sm">Արխիվացնել</span>
+                                                <i class="voyager-archive"></i> <span class="hidden-xs hidden-sm">Արխիվացնել</span>
                                             </button>
                                         </td>
                                     </tr>
