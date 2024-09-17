@@ -13,6 +13,7 @@ use TCG\Voyager\Database\Types\Type;
 use TCG\Voyager\Events\BreadAdded;
 use TCG\Voyager\Events\BreadDeleted;
 use TCG\Voyager\Events\BreadUpdated;
+use TCG\Voyager\Events\BreadDataUpdated;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 use Illuminate\Support\Facades\Hash;
