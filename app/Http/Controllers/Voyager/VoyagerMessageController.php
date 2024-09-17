@@ -1011,9 +1011,9 @@ class VoyagerMessageController extends VoyagerBaseController
     }
 
     public function addArchive(Request $request){
-        $id = $request->message_id;
-        $archive = Message::where('id',$id)->first();
+        $archive = Message::findOrFail($request->message_id);
         $archive->archive = 1;
+        $archive->price = $request->archive_code;
         if($archive->save()){
             echo 'archive';exit;
         }else{

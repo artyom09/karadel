@@ -37,6 +37,66 @@
 @stop
 
 @section('content')
+    <style>
+        .modal {
+            display: none; /* Скрыть модальное окно по умолчанию */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .modal-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submitArchive {
+            background-color: #4CAF50; /* Зеленый цвет для кнопки подтверждения */
+            color: white;
+        }
+
+        #cancelArchive {
+            background-color: #f44336; /* Красный цвет для кнопки отмены */
+            color: white;
+        }
+    </style>
     <div class="page-content browse container-fluid">
         @include('voyager::alerts')
         <div class="row">
@@ -312,6 +372,19 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+   <div id="archiveModal" class="modal modal-danger">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h2>Նշեք գումարը</h2>
+            <input type="number" id="archiveCode" name="archiveCode" placeholder="Գրեք գումարի չափը">
+            <div class="modal-buttons">
+                <button id="submitArchive">Հաստատել</button>
+                <button id="cancelArchive">Չեղարկել</button>
+            </div>
+        </div>
+        </div>
+    </div>
 @stop
 
 @section('css')
@@ -332,23 +405,42 @@
             }
         });
 
-        $('.add-archive').click(function(e){
-            e.preventDefault();
-            var message_id = $(this).data( "id" );
-            if ( confirm("Գցել արխիվ ?")) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/admin/add-archive',
-                    data: {message_id: message_id},
-                    error: function (data) {
-                        var errors = data.responseJSON;
-                        console.log(errors);
-                    },
-                    success: function (resp) {
-                        location.reload();
-                    }
-                });
-            }
+        $(document).ready(function() {
+            var messageIdToSend;
+
+            // Открываем модальное окно и сохраняем ID сообщения
+            $('.add-archive').click(function(e) {
+                e.preventDefault();
+                messageIdToSend = $(this).data("id");
+                $('#archiveModal').show();
+            });
+
+            // Отправляем данные через AJAX, если пользователь нажал "Подтвердить"
+            $('#submitArchive').click(function() {
+                var archiveCode = $('#archiveCode').val();
+
+                if (archiveCode) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/admin/add-archive',
+                        data: { message_id: messageIdToSend, archive_code: archiveCode },
+                        error: function (data) {
+                            var errors = data.responseJSON;
+                            console.log(errors);
+                        },
+                        success: function (resp) {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    alert("Введите число для подтверждения.");
+                }
+            });
+
+            // Закрываем модальное окно
+            $('#cancelArchive').click(function() {
+                $('#archiveModal').hide();
+            });
         });
 
         $(document).ready(function () {
