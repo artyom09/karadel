@@ -5,16 +5,16 @@
 @section('page_header')
     <div class="container-fluid">
         <h1 class="page-title">
-            <i class="{{ $dataType->icon }}"></i> {{ $dataType->getTranslatedAttribute('display_name_plural') }}
+            <i class="{{ $dataType->icon }}"></i> Պատվերների արխիվ
         </h1>
-        @can('add', app($dataType->model_name))
+        {{-- @can('add', app($dataType->model_name))
             <a href="{{ route('voyager.'.$dataType->slug.'.create') }}" class="btn btn-success btn-add-new">
                 <i class="voyager-plus"></i> <span>{{ __('voyager::generic.add_new') }}</span>
             </a>
         @endcan
         @can('delete', app($dataType->model_name))
             @include('voyager::partials.bulk-delete')
-        @endcan
+        @endcan --}}
         @can('edit', app($dataType->model_name))
             @if(!empty($dataType->order_column) && !empty($dataType->order_display_column))
                 <a href="{{ route('voyager.'.$dataType->slug.'.order') }}" class="btn btn-primary btn-add-new">
@@ -255,12 +255,22 @@
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)
                                                 @if (!method_exists($action, 'massAction'))
-                                                    @include('voyager::bread.partials.actions', ['action' => $action])
+                                                    @php
+                                                        // need to recreate object because policy might depend on record data
+                                                        $class = get_class($action);
+                                                        $action = new $class($dataType, $data);
+                                                    @endphp
+                                                    @can ($action->getPolicy(), $data)
+                                                        @if ($action->shouldActionDisplayOnRow($data))
+                                                        @if($action->getTitle()  != 'Delete' && $action->getTitle()  != 'Ջնջել' && $action->getTitle()  != 'Удалить')
+                                                            <a href="{{ $action->getRoute($dataType->name) }}" title="{{ $action->getTitle() }}" {!! $action->convertAttributesToHtml() !!}>
+                                                                <i class="{{ $action->getIcon() }}"></i> <span class="hidden-xs hidden-sm">{{ $action->getTitle() }}</span>
+                                                            </a>
+                                                        @endif
+                                                        @endif
+                                                    @endcan
                                                 @endif
                                             @endforeach
-                                            <button  class="btn btn-sm btn-primary pull-right edit" id="add-archive" data-id="{{$data->id}}">
-                                                <i class="voyager-edit"></i> <span class="hidden-xs hidden-sm">Արխիվացնել</span>
-                                            </button>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -326,31 +336,6 @@
         <script src="{{ voyager_asset('lib/js/dataTables.responsive.min.js') }}"></script>
     @endif
     <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        $('#add-archive').click(function(e){
-            e.preventDefault();
-            var message_id = $(this).data( "id" );
-            if ( confirm("Գցել արխիվ ?")) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/admin/add-archive',
-                    data: {message_id: message_id},
-                    error: function (data) {
-                        var errors = data.responseJSON;
-                        console.log(errors);
-                    },
-                    success: function (resp) {
-                        location.reload();
-                    }
-                });
-            }
-        });
-
         $(document).ready(function () {
             @if (!$dataType->server_side)
                 var table = $('#dataTable').DataTable({!! json_encode(

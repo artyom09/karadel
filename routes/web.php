@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Voyager\VoyagerMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ use App\Http\Controllers\ProductController;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::post('add-archive',  [VoyagerMessageController::class, 'addArchive']);
+    Route::get('archives',      [VoyagerMessageController::class, 'ArchiveMessage']);
 });
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
