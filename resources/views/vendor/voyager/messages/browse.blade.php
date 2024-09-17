@@ -258,7 +258,7 @@
                                                     @include('voyager::bread.partials.actions', ['action' => $action])
                                                 @endif
                                             @endforeach
-                                            <button  class="btn btn-sm btn-primary pull-right edit" id="add-archive" data-id="{{$data->id}}">
+                                            <button  class="btn btn-sm btn-success pull-right edit" id="add-archive" data-id="{{$data->id}}" style="margin-right: 5px;">
                                                 <i class="voyager-edit"></i> <span class="hidden-xs hidden-sm">Արխիվացնել</span>
                                             </button>
                                         </td>
