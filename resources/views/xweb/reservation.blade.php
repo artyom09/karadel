@@ -124,10 +124,10 @@
                                     <div class="col-12 col-md-6 form__item animate-in-up">
                                         <input type="datetime-local" name="date" placeholder="Օր / Ժամ" required>
                                     </div>
-                                    <div class="col-12 form__item animate-in-up">
+                                    <div class="col-12 col-md-12  form__item animate-in-up">
                                         <textarea name="message" placeholder="@lang('main.օther-notes')" required></textarea>
                                     </div>
-                                    <div class="col-12 form__item animate-in-up">
+                                    <div class="col-12 col-md-12  form__item animate-in-up">
                                         <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
                                             <span class="btn-caption">@lang('main.make-request')</span>
                                             <i class="ph-bold ph-paper-plane-tilt"></i>
