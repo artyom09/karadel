@@ -13,7 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('xweb') }}/css/loaders/loader.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('xweb') }}/css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('xweb') }}/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('xweb') }}/css/main.css?v1">
 
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.all.min.js"></script>
 

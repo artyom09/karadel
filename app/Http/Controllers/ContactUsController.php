@@ -16,7 +16,7 @@ class ContactUsController extends Controller
     public function reservation() {
         $contact_us = ContactUs::where('id', 1)->first();
         $photozonas = Photozona::get();
-        $accessories = Accessory::get();
+        $accessories = Accessory::orderBy('sort', 'desc')->get();
         $clothes = Clothes::get();
         return view('xweb.reservation', [
             'contact_us' => $contact_us,

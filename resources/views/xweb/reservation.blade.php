@@ -74,6 +74,11 @@
                                             <input type="checkbox" name="selected_photos[accessory][]" value="{{ $accessory->id }}" id="accessory-{{ $accessory->id }}" class="gallery__checkbox">
                                             <label for="accessory-{{ $accessory->id }}" class="gallery__label">
                                                 <img src="{{Voyager::image($accessory->photo)}}" class="gallery__link r-images">
+                                                @if($accessory->sort == '1')
+                                                    <span class="rec-info">@lang('main.big')</span>
+                                                @else
+                                                    <span class="rec-info">@lang('main.small')</span>
+                                                @endif
                                             </label>
                                         </figure>
                                         @endforeach
