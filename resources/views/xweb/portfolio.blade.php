@@ -1,47 +1,6 @@
 @extends('layouts.front')
 
 @section('content')
-{{-- <section class="project-section pt_60 pb_60 centred">
-    <div class="auto-container">
-        <div class="sortable-masonry">
-            <div class="filters centred mb_60 d-none">
-                <ul class="filter-tabs filter-btns clearfix">
-                    <li class="active filter" data-role="button" data-filter=".all">All Works</li>
-                </ul>
-            </div>
-            <div class="items-container row clearfix">
-                @foreach($galleries as $photo)
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all">
-                    <div class="project-block-one">
-                        <div class="inner-box image_block_one">
-                            <figure class="image-box">
-                                @if($photo->image != null)
-                                <img src="{{Voyager::image($photo->image)}}" alt>
-                                @else
-                                <img src="{{ asset('xweb') }}/images/icon-1.png" alt>
-                                @endif
-                                <div class="content-box ">
-                                    <div class="video-box" style="display: contents;">
-                                        <a href="{{$photo->youtube_link}}" class="lightbox-image" data-caption=""><i class="icon-16"></i></a>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="pagination-area">
-        <div aria-label="Page navigation">
-            {{$galleries->links()}}
-        </div>
-    </div>
-</section> --}}
-
     <div id="content" class="content">
         <div class="content__wrapper">
             <section id="portfolio" class="inner inner-first portfolio">
