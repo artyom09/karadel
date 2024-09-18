@@ -21,10 +21,10 @@
                         <div class="row gx-0" itemscope itemtype="http://schema.org/ImageGallery">
                             @foreach($galleries as $gallery)
                             <figure class="col-12 col-md-4 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="{{ route('portfolio.show', $gallery->slug) }}" data-image="{{Voyager::image($gallery->image)}}" class="gallery__link g-images" itemprop="contentUrl" data-size="1400x1400"></a>
+                                <a href="{{ route('portfolio.show', $gallery->slug) }}#content" data-image="{{Voyager::image($gallery->image)}}" class="gallery__link g-images" itemprop="contentUrl" data-size="1400x1400"></a>
                                 <figcaption class="gallery__descr" itemprop="caption description">
                                     <div class="card__tags d-flex flex-wrap">
-                                        <a href="{{ route('portfolio.show', $gallery->slug) }}"><span class="rounded-tag opposite">{{$gallery->getTranslatedAttribute('title',config('app.locale'),config('voyager.multilingual.default'))}}</span></a>
+                                        <a href="{{ route('portfolio.show', $gallery->slug) }}#content"><span class="rounded-tag opposite">{{$gallery->getTranslatedAttribute('title',config('app.locale'),config('voyager.multilingual.default'))}}</span></a>
                                     </div>
                                 </figcaption>
                             </figure>
