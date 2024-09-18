@@ -11,7 +11,7 @@ use App\Models\Brand;
 class ProductController extends Controller
 {
     public function products() {
-        $products = Product::paginate(12);
+        $products = Product::paginate(15);
         $categories = ProductCategory::get();
 
         return view('xweb.products', [
