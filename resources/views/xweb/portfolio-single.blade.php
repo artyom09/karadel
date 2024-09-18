@@ -30,17 +30,19 @@
                                 </figcaption>
                             </figure>
 
-                            @foreach($images as $image)
-                            <figure class="col-12 col-md-4 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="{{Voyager::image($image)}}" data-image="{{Voyager::image($image)}}" class="gallery__link g-images" itemprop="contentUrl" data-size="1400x1400">
-                                    <img src="{{Voyager::image($image)}}" class="gallery__image" itemprop="thumbnail" alt="Image description">
-                                </a>
-                                <figcaption class="gallery__descr" itemprop="caption description">
-                                    <h5>{{$gallery->getTranslatedAttribute('title',config('app.locale'),config('voyager.multilingual.default'))}}</h5>
-                                    <p class="small">{{$gallery->getTranslatedAttribute('info',config('app.locale'),config('voyager.multilingual.default'))}}</p>
-                                </figcaption>
-                            </figure>
-                            @endforeach
+                            @if($images != null)
+                                @foreach($images as $image)
+                                <figure class="col-12 col-md-4 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="{{Voyager::image($image)}}" data-image="{{Voyager::image($image)}}" class="gallery__link g-images" itemprop="contentUrl" data-size="1400x1400">
+                                        <img src="{{Voyager::image($image)}}" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                                    </a>
+                                    <figcaption class="gallery__descr" itemprop="caption description">
+                                        <h5>{{$gallery->getTranslatedAttribute('title',config('app.locale'),config('voyager.multilingual.default'))}}</h5>
+                                        <p class="small">{{$gallery->getTranslatedAttribute('info',config('app.locale'),config('voyager.multilingual.default'))}}</p>
+                                    </figcaption>
+                                </figure>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
