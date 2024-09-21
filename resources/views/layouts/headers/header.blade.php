@@ -21,7 +21,7 @@ function activeMenu($uri = '')
             <nav id="menu" class="menu">
                 <ul class="menu__list d-flex justify-content-start">
                     <li class="menu__item">
-                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#home" @else href="https://karadel.xholding.am/{{config('app.locale')}}" @endif>
+                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#home" @else href="/{{config('app.locale')}}" @endif>
                             <span class="menu__caption">@lang('main.home')</span>
                             <i class="ph-bold ph-house-simple"></i>
                         </a>
@@ -33,7 +33,7 @@ function activeMenu($uri = '')
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#about" @else  href="https://karadel.xholding.am/{{config('app.locale')}}#about" @endif>
+                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#about" @else  href="/{{config('app.locale')}}#about" @endif>
                             <span class="menu__caption">@lang('main.about-us')</span>
                             <i class="ph-bold ph-user"></i>
                         </a>
@@ -45,7 +45,7 @@ function activeMenu($uri = '')
                         </a>
                     </li> --}}
                     <li class="menu__item">
-                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#reservation" @else  href="https://karadel.xholding.am/{{config('app.locale')}}#reservation" @endif>
+                        <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#reservation" @else  href="/{{config('app.locale')}}#reservation" @endif>
                             <span class="menu__caption">@lang('main.reservation')</span>
                             <i class="ph-bold ph-envelope"></i>
                         </a>
