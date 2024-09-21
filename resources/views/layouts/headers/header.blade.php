@@ -32,7 +32,7 @@ function activeMenu($uri = '')
                             <i class="ph-bold ph-squares-four"></i>
                         </a>
                     </li>
-                    <li class="menu__item">@dd(Route::currentRouteName() )
+                    <li class="menu__item">
                         <a class="menu__link btn" @if(Route::currentRouteName() == null) href="#about" @else  href="https://karadel.xholding.am/{{config('app.locale')}}#about" @endif>
                             <span class="menu__caption">@lang('main.about-us')</span>
                             <i class="ph-bold ph-user"></i>
