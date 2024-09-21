@@ -33,8 +33,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/',                 [IndexController::class, 'home']);
 
     Route::get('about-us',          [AboutUsController::class, 'aboutUs'])->name('about-us');
-    Route::get('portfolio',         [AboutUsController::class, 'portfolio'])->name('portfolio');
-    Route::get('portfolio/{slug}',  [AboutUsController::class, 'portfolioSingle'])->name('portfolio.show');
+    Route::get('/portfolio',         [AboutUsController::class, 'portfolio'])->name('portfolio');
+    Route::get('/portfolio/{slug}',  [AboutUsController::class, 'portfolioSingle'])->name('portfolio.show');
 
     // Route::get('contact-us',        [ContactUsController::class, 'contactUs'])->name('contact-us');
     // Route::post('contact-us',       [ContactUsController::class, 'message'])->name('message');
